@@ -46,10 +46,10 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center overflow-hidden">
-                <span className="text-lg font-bold text-primary">হ</span>
+                <img src="/main.jpeg" alt="হাদিভাই লোগো" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-foreground">হাদিভাই</span>
+                <span className="font-bold text-foreground">হাদি ভাই</span>
                 <span className="text-xs text-muted-foreground">স্মৃতি সংগ্রহশালা</span>
               </div>
             </Link>

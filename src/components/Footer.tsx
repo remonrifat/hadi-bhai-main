@@ -55,8 +55,7 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-secondary border border-border flex items-center justify-center">
-                <span className="text-xl font-bold text-primary">হ</span>
-              </div>
+ <img src="/main.jpeg" alt="হাদিভাই লোগো" className="w-full h-full rounded-full object-cover" />              </div>
               <div className="flex flex-col">
                 <span className="font-bold text-xl text-foreground">হাদিভাই</span>
                 <span className="text-sm text-muted-foreground">স্মৃতি সংগ্রহশালা</span>
@@ -157,8 +156,9 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline font-medium ml-1"
                 >
-                  Remon Sharker Rifat
+                  Remon Sharker Rifat.
                 </a>
+                
               </p>
             </div>
           </div>
