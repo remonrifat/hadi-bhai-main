@@ -187,7 +187,7 @@ export const HeroSection = () => {
                   controlsList="nodownload"
                 >
                   <source
-                    src="/public/ওসমান হাদীর বিদ্রোহী  কবিতা আবৃত্তি.mp4"
+                    src="/ওসমান হাদীর বিদ্রোহী  কবিতা আবৃত্তি.mp4"
                     type="video/mp4"
                   />
                   আপনার ব্রাউজার ভিডিও সমর্থন করে না।
