@@ -15,8 +15,10 @@ const Tributes = () => {
     message: "",
   });
   
-  const { addTribute, getApprovedTributes } = useTributeStore();
+  const { addTribute, getApprovedTributes, tributes } = useTributeStore();
   const approvedTributes = getApprovedTributes();
+  const pendingCount = tributes.filter(t => !t.approved).length;
+  const totalCount = tributes.length;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -94,8 +96,16 @@ const Tributes = () => {
                 <p className="text-muted-foreground">কোনো শ্রদ্ধাঞ্জলি এখনো প্রদর্শিত হয়নি</p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {approvedTributes.map((tribute, index) => (
+              <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <div className="card-gradient border border-border rounded-xl p-6 flex flex-col gap-4">
+                  <h3 className="text-lg font-bold">সারসংক্ষেপ</h3>
+                  <p className="text-foreground">মোট জমা: <span className="font-medium">{totalCount}</span></p>
+                  <p className="text-foreground">অনুমোদিত: <span className="font-medium">{approvedTributes.length}</span></p>
+                  <p className="text-foreground">মুলতুবি: <span className="font-medium">{pendingCount}</span></p>
+                  <p className="text-muted-foreground">এখানে প্রদর্শিত হচ্ছে: <span className="font-medium">{approvedTributes.length}</span></p>
+                </div>
+                <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {approvedTributes.map((tribute, index) => (
                   <motion.div
                     key={tribute.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -116,8 +126,7 @@ const Tributes = () => {
                     </div>
                   </motion.div>
                 ))}
-              </div>
-            )}
+              </div>              </div>            )}
           </div>
         </section>
       </main>
